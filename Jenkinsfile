@@ -1,8 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'node:carbon'
-      args '-p 3001:3001'
+    dockerfile {
+      filename '/root/TestDeployment/docker-compose-prod.yml'
     }
 
   }
